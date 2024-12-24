@@ -15,3 +15,15 @@ students = {
          'Histoire': 78
      }
 }
+
+name = input("Entrez le nom de l’étudiant :")
+
+if name in students:
+    print(f"Notes de {name} : ")
+    Somme_notes = 0
+    for subject in students[name]:
+        print(f"{subject}: {students[name][subject]}")
+        Somme_notes += int(students[name][subject])
+    print(f"Moyenne de {name} : {Somme_notes / len(students[name])}")
+else:
+    print(f"L'étudiant {name} n'existe pas dans la liste.")
